@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*== Global Styles ==*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f4f7fd;
+}
+
+/* =============================================================================================================================================================================================================================================================== */
+
+/* -- Sidebar styles -- */
+.sidebar {
+  width: 300px;
+  height: 100vh; /* Makes the sidebar full height */
+  background-color: #ffffff;
+  border-right: 1px solid #e4ebfa;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo-container {
+  margin-bottom: 54px;
+}
+
+.sidebar-logo {
+  width: 100%;
+  height: 50px;
+}
+
+.sidebar-boards-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #828fa3;
+  letter-spacing: 2.4px;
+  margin: 19px 5px 19px 5px;
+}
+
+.sidebar-board-btn {
+  background: none;
+  background-color: #635fc7;
+  font-family: inherit;
+  font-size: 18px;
+  width: 100%;
+  margin: 0 -24px;
+  color: #fff;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 0 100px 100px 0; /* left, right, bottom right, bottom left coners */
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-board-btn:hover {
+  cursor: pointer;
+  background-color: #635fc7;
+  color: #ccc;
+}
+/* =============================================================================================================*/
+/* -- Main layout Header -- */
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  height: 97px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4ebfa;
+}
+
+.board-header {
+  gap: 14px;
+}
+
+.main-content {
+  flex-grow: 1; /* Makes it so that this area takes up the remaining space next to the sidebar */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.board-header {
+  flex-shrink: 0;
+}
+
+.header-logo {
+  display: none;
+}
+/* -- Board --*/
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  gap: 24px;
+  padding: 24px;
+  flex-grow: 1; /*Fills the remaining vertical space*/
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 23px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
+  font-weight: 700;
+  font-size: 15px;
+  color: #000112;
+  cursor: pointer;
+}
+
+.task-list li:hover {
+  color: #635fc7;
+}
+
+.column-title {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  color: #828fa3;
+  letter-spacing: 2.4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.circle-todo {
+  background-color: #49c4e5;
+}
+
+.circle-doing {
+  background-color: #8471f2;
+}
+
+.circle-done {
+  background-color: #67e2ae;
+}
+/* ========================================================================================================= */
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .task-board {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .header-logo {
+    display: inline-block;
+    height: 20px;
+  }
+}

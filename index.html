@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaban</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <script src="main.js" defer async></script>
+  </head>
+
+  <body>
+    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <nav class="sidebar">
+      <div class="sidebar-logo-container">
+        <img
+          class="sidebar-logo"
+          src="assets/logo-light.svg"
+          alt="Kaban logo"
+        />
+      </div>
+
+      <div class="sidebar-boards">
+        <h4 class="sidebar-boards-title">ALL BOARDS (1)</h4>
+        <button class="sidebar-board-btn">Launch Career</button>
+      </div>
+    </nav>
+
+    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
+    <div class="main-content">
+      <header class="board-header">
+        <div class="header-logo-container">
+          <img
+            class="header-logo"
+            src="assets/favicon.svg"
+            alt="Kaban mobile logo"
+          />
+        </div>
+        <h2 class="board-title">Launch Career</h2>
+      </header>
+
+      <main class="task-board">
+        <!-- TODO Column -->
+        <div class="task-column">
+          <h3 class="column-title">
+            TODO (4)
+            <span class="circle circle-todo"></span>
+          </h3>
+
+          <ul class="task-list">
+            <li>Launch Epic Career 🚀</li>
+            <li>Conquer React ⚛️</li>
+            <li>Understand Databases ⚙️</li>
+            <li>Crush Frameworks 🖼️</li>
+          </ul>
+        </div>
+
+        <!-- DOING Column -->
+        <div class="task-column">
+          <h3 class="column-title">
+            DOING (2) <span class="circle circle-doing"></span>
+          </h3>
+
+          <ul class="task-list">
+            <li>Master JavaScript 💛</li>
+            <li>Never give up🏆</li>
+          </ul>
+        </div>
+
+        <!-- DONE Column -->
+        <div class="task-column">
+          <h3 class="column-title">
+            DONE(2) <span class="circle circle-done"></span>
+          </h3>
+
+          <ul class="task-list">
+            <li>Explore ES6 Features 🚀</li>
+            <li>Have fun 🥳</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
