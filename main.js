@@ -4,7 +4,14 @@ const tasks = [];
 const title1 = window.prompt("Enter task 1 title:") || "No title";
 const description1 =
   window.prompt("Enter task 1 description:") || "No description";
-const status1 = window.prompt("Enter task 1 status") || "No status";
+let status1;
+
+do {
+  status1 = window.prompt("Enter task 1 status (todo, doing, done):") || "";
+  if (!["todo", "doing", "done"].includes(status1.toLowerCase())) {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+  }
+} while (!["todo", "doing", "done"].includes(status1.toLowerCase()));
 // -- Group the first task's details into a single object --
 const task1 = {
   title: title1,
@@ -17,7 +24,14 @@ tasks.push(task1);
 const title2 = window.prompt("Enter task 2 title:") || "No title";
 const description2 =
   window.prompt("Enter task 2 description:") || "No description";
-const status2 = window.prompt("Enter task 2 status") || "No status";
+let status2;
+
+do {
+  status2 = window.prompt("Enter task 2 status (todo, doing, done):") || "";
+  if (!["todo", "doing", "done"].includes(status2.toLowerCase())) {
+    alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+  }
+} while (!["todo", "doing", "done"].includes(status2.toLowerCase()));
 // -- Group the second task")
 const task2 = {
   title: title2,
